@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GreenViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-aY-IPr">
-                                <rect key="frame" x="145.5" y="402.5" width="123" height="37"/>
+                                <rect key="frame" x="145.5" y="429.5" width="123" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -31,6 +31,24 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="NZi-GR-F7F" kind="show" id="P7N-mO-uIx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnJ-dz-DI9">
+                                <rect key="frame" x="154" y="480" width="107" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go To Dice ">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KTx-DB-wpV" kind="show" id="K3V-Xs-1mb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,11 +70,11 @@
             <objects>
                 <viewController id="NZi-GR-F7F" customClass="BlueViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKJ-sP-X7h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wan-do-tVa">
-                                <rect key="frame" x="138" y="402.5" width="138.5" height="37"/>
+                                <rect key="frame" x="138" y="429.5" width="138.5" height="37"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -73,6 +91,25 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="TNe-fZ-fdb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-bL-Z0I">
+                                <rect key="frame" x="134" y="488" width="107" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go To Dice ">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KTx-DB-wpV" kind="show" id="PMX-gR-xiV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1x0-ZT-s7c"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -86,6 +123,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diV-cJ-bNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1683" y="84"/>
+        </scene>
+        <!--Dice View Controller-->
+        <scene sceneID="cha-sk-SSs">
+            <objects>
+                <viewController id="KTx-DB-wpV" customClass="DiceViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vts-9a-5Hv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="dbu-kv-jGD">
+                                <rect key="frame" x="107" y="122" width="200" height="200"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice2" id="tiL-ak-TaP">
+                                <rect key="frame" x="107" y="330" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-P9-hrj">
+                                <rect key="frame" x="107" y="563" width="200" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Roll Dice">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollDice:" destination="KTx-DB-wpV" eventType="touchUpInside" id="tyx-e5-cH7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-NO-MZG">
+                                <rect key="frame" x="107" y="619" width="200" height="101"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Total: ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.39604452125011691" blue="0.29014486572621923" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dnn-zb-JeU"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="tiL-ak-TaP" firstAttribute="top" secondItem="dbu-kv-jGD" secondAttribute="bottom" constant="8" symbolic="YES" id="6tb-aV-P8J"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="dbu-kv-jGD" secondAttribute="leading" id="B0T-V0-Po0"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="dbu-kv-jGD" secondAttribute="trailing" id="CHd-4o-HzV"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="eSc-NO-MZG" secondAttribute="trailing" id="CLD-jI-EW9"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="eSc-NO-MZG" secondAttribute="leading" id="Po5-c0-smu"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="tiL-ak-TaP" secondAttribute="leading" id="aVF-7U-EIM"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="tiL-ak-TaP" secondAttribute="trailing" id="rkU-l6-4Cl"/>
+                            <constraint firstItem="IF2-P9-hrj" firstAttribute="top" secondItem="tiL-ak-TaP" secondAttribute="bottom" constant="33" id="tIK-lc-fc3"/>
+                            <constraint firstItem="eSc-NO-MZG" firstAttribute="top" secondItem="IF2-P9-hrj" secondAttribute="bottom" constant="8" symbolic="YES" id="xPD-0G-dY0"/>
+                            <constraint firstItem="dbu-kv-jGD" firstAttribute="top" secondItem="Vts-9a-5Hv" secondAttribute="top" constant="102" id="yrF-j7-63K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cX2-2c-9bW"/>
+                    <connections>
+                        <outlet property="diceView1" destination="dbu-kv-jGD" id="M2g-gA-fNT"/>
+                        <outlet property="diceView2" destination="tiL-ak-TaP" id="gjC-HJ-x0a"/>
+                        <outlet property="total" destination="eSc-NO-MZG" id="Vc8-eh-W1E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAE-gA-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428.985507246377" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQq-9Z-n6t">
@@ -107,15 +219,29 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="P7N-mO-uIx"/>
-        <segue reference="TNe-fZ-fdb"/>
+        <segue reference="K3V-Xs-1mb"/>
+        <segue reference="V5l-gh-isD"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="dice1" width="100" height="100"/>
+        <image name="dice2" width="100" height="100"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

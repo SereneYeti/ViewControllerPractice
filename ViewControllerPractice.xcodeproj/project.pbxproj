@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A50A4692823FCC900BA6C3F /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A50A4682823FCC900BA6C3F /* DiceViewController.swift */; };
 		5A58E4AB280412F8005BB073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E4AA280412F8005BB073 /* AppDelegate.swift */; };
 		5A58E4AD280412F8005BB073 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E4AC280412F8005BB073 /* SceneDelegate.swift */; };
 		5A58E4AF280412F8005BB073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E4AE280412F8005BB073 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A50A4682823FCC900BA6C3F /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		5A58E4A7280412F8005BB073 /* ViewControllerPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A58E4AA280412F8005BB073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A58E4AC280412F8005BB073 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				5A58E4AC280412F8005BB073 /* SceneDelegate.swift */,
 				5A58E4AE280412F8005BB073 /* ViewController.swift */,
 				5A58E4B0280412F8005BB073 /* Main.storyboard */,
+				5A50A4682823FCC900BA6C3F /* DiceViewController.swift */,
 				5A58E4C028041BA9005BB073 /* GreenViewController.swift */,
 				5A58E4C228041BB9005BB073 /* BlueViewController.swift */,
 				5A58E4B3280412F9005BB073 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A58E4C128041BA9005BB073 /* GreenViewController.swift in Sources */,
+				5A50A4692823FCC900BA6C3F /* DiceViewController.swift in Sources */,
 				5A58E4AF280412F8005BB073 /* ViewController.swift in Sources */,
 				5A58E4AB280412F8005BB073 /* AppDelegate.swift in Sources */,
 				5A58E4C328041BB9005BB073 /* BlueViewController.swift in Sources */,
