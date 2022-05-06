@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -158,8 +159,8 @@
                                     <action selector="rollDice:" destination="KTx-DB-wpV" eventType="touchUpInside" id="tyx-e5-cH7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-NO-MZG">
-                                <rect key="frame" x="107" y="619" width="200" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-NO-MZG">
+                                <rect key="frame" x="107" y="619" width="200" height="34"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Total: ">
@@ -172,6 +173,24 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXU-J8-ErI">
+                                <rect key="frame" x="84.5" y="661" width="245" height="151"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="View Roll History">
+                                            <attributes>
+                                                <font key="NSFont" size="27" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hR7-Ty-x5n" kind="show" id="e9J-b9-ZWY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dnn-zb-JeU"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -180,8 +199,11 @@
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="dbu-kv-jGD" secondAttribute="leading" id="B0T-V0-Po0"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="dbu-kv-jGD" secondAttribute="trailing" id="CHd-4o-HzV"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="eSc-NO-MZG" secondAttribute="trailing" id="CLD-jI-EW9"/>
+                            <constraint firstItem="EXU-J8-ErI" firstAttribute="centerX" secondItem="Vts-9a-5Hv" secondAttribute="centerX" id="Mvh-D7-8tG"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="eSc-NO-MZG" secondAttribute="leading" id="Po5-c0-smu"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="tiL-ak-TaP" secondAttribute="leading" id="aVF-7U-EIM"/>
+                            <constraint firstItem="dnn-zb-JeU" firstAttribute="bottom" secondItem="EXU-J8-ErI" secondAttribute="bottom" constant="50" id="gmW-ep-OZX"/>
+                            <constraint firstItem="EXU-J8-ErI" firstAttribute="top" secondItem="eSc-NO-MZG" secondAttribute="bottom" constant="8" symbolic="YES" id="hS9-yn-RQO"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="tiL-ak-TaP" secondAttribute="trailing" id="rkU-l6-4Cl"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="top" secondItem="tiL-ak-TaP" secondAttribute="bottom" constant="33" id="tIK-lc-fc3"/>
                             <constraint firstItem="eSc-NO-MZG" firstAttribute="top" secondItem="IF2-P9-hrj" secondAttribute="bottom" constant="8" symbolic="YES" id="xPD-0G-dY0"/>
@@ -198,6 +220,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAE-gA-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2428.985507246377" y="83.705357142857139"/>
+        </scene>
+        <!--Dice Roll History View Controller-->
+        <scene sceneID="zW8-Ht-lGh">
+            <objects>
+                <viewController id="hR7-Ty-x5n" customClass="DiceRollHistoryViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OVu-2y-VRz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-q0-bZz">
+                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.44261605669999998" green="0.8169523742" blue="0.49854776789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellID" rowHeight="50" id="Oer-Nk-RCr" customClass="TableViewCell" customModule="ViewControllerPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oer-Nk-RCr" id="Nhi-CZ-TGE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-3S-3il">
+                                                    <rect key="frame" x="261" y="-1" width="124" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-Yi-nFx">
+                                                    <rect key="frame" x="20" y="0.0" width="124" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyq-lA-dw1">
+                                                    <rect key="frame" x="152" y="-1" width="124" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tyq-lA-dw1" firstAttribute="centerY" secondItem="Nhi-CZ-TGE" secondAttribute="centerY" id="FSD-SO-8vE"/>
+                                                <constraint firstItem="Tyq-lA-dw1" firstAttribute="centerX" secondItem="Nhi-CZ-TGE" secondAttribute="centerX" id="YSh-It-Qcu"/>
+                                                <constraint firstItem="Tyq-lA-dw1" firstAttribute="leading" secondItem="CbK-Yi-nFx" secondAttribute="trailing" constant="10" id="kbY-N2-adG"/>
+                                                <constraint firstItem="CbK-Yi-nFx" firstAttribute="centerY" secondItem="Nhi-CZ-TGE" secondAttribute="centerY" id="oS3-QK-Zap"/>
+                                                <constraint firstItem="Efc-3S-3il" firstAttribute="centerY" secondItem="Nhi-CZ-TGE" secondAttribute="centerY" id="oUt-5z-sZH"/>
+                                                <constraint firstItem="Efc-3S-3il" firstAttribute="leading" secondItem="Tyq-lA-dw1" secondAttribute="trailing" constant="10" id="ofU-cf-pt9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="total" destination="Efc-3S-3il" id="wvu-S5-Xye"/>
+                                            <outlet property="valueA" destination="CbK-Yi-nFx" id="pL3-r5-2lm"/>
+                                            <outlet property="valueB" destination="Tyq-lA-dw1" id="GKf-bT-j0I"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hR7-Ty-x5n" id="mQl-OU-adE"/>
+                                    <outlet property="delegate" destination="hR7-Ty-x5n" id="eEX-OH-xIm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WQg-NE-gwZ"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="SuZ-q0-bZz" firstAttribute="centerY" secondItem="WQg-NE-gwZ" secondAttribute="centerY" id="3E8-ic-QGO"/>
+                            <constraint firstItem="SuZ-q0-bZz" firstAttribute="width" secondItem="OVu-2y-VRz" secondAttribute="width" id="HX2-WK-Po0"/>
+                            <constraint firstItem="SuZ-q0-bZz" firstAttribute="centerX" secondItem="WQg-NE-gwZ" secondAttribute="centerX" id="R8y-ts-QsH"/>
+                            <constraint firstItem="SuZ-q0-bZz" firstAttribute="height" secondItem="OVu-2y-VRz" secondAttribute="height" multiplier="1.00022" id="dwe-a6-81U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZJm-9R-tbY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sX-tX-qCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3195.6521739130435" y="98.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQq-9Z-n6t">
@@ -225,6 +325,12 @@
     <resources>
         <image name="dice1" width="100" height="100"/>
         <image name="dice2" width="100" height="100"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -242,6 +348,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
