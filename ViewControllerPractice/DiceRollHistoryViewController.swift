@@ -12,6 +12,17 @@ import UIKit
 class DiceRollHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //! -> Refers to non optional
     @IBOutlet weak var DiceTableView: UITableView!
+    @IBOutlet weak var lblCalc: UILabel!
+    
+    @IBAction func GetTotalValueStats(_ sender: Any) {
+        GetTotalStats();
+    }
+    @IBAction func GetValueBStats(_ sender: Any) {
+        GetValueBStats();
+    }
+    @IBAction func GetValueAStats(_ sender: Any) {
+        GetValueAStats();
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return diceHistory.count;
     }
@@ -32,8 +43,56 @@ class DiceRollHistoryViewController: UIViewController, UITableViewDataSource, UI
 
         // Do any additional setup after loading the view.
         //print("Value A: " + String(diceHistory[0].valueA) + "\nValue B: " + String(diceHistory[0].valueB) + "\nTotal: " + String(diceHistory[0].total));
+        GetTotalStats();
     }
     
+    func GetTotalStats() -> Void {
+        
+        var totalArr = [Int]();
+        for I in diceHistory {
+            totalArr.append(I.total);
+        }
+        
+        //let testArr = [Int](arrayLiteral: 2,6,9,12,12);
+        
+        let mean = MathCalculations.CalculateMean(set: totalArr);
+        let median = MathCalculations.CalculateMedian(set: totalArr)
+        let mode = MathCalculations.CalculateMode(set: totalArr);
+        
+        lblCalc.text = "Total- Mean: " + String(format : "%.2f", mean)  + "\nTotal- Medain: " + String(median) + "\nTotal- Mode: " + String(mode);
+    }
+    
+    func GetValueAStats() -> Void {
+        
+        var valueA_arr = [Int]();
+        for I in diceHistory {
+            valueA_arr.append(I.valueA);
+        }
+        
+        //let testArr = [Int](arrayLiteral: 2,6,9,12,12);
+        
+        let mean = MathCalculations.CalculateMean(set: valueA_arr);
+        let median = MathCalculations.CalculateMedian(set: valueA_arr)
+        let mode = MathCalculations.CalculateMode(set: valueA_arr);
+        
+        lblCalc.text = "Value A- Mean: " + String(format : "%.2f", mean)  + "\nValue A- Medain: " + String(median) + "\nValue A- Mode: " + String(mode);
+    }
+    
+    func GetValueBStats() -> Void {
+        
+        var valueB_arr = [Int]();
+        for I in diceHistory {
+            valueB_arr.append(I.valueB);
+        }
+        
+        //let testArr = [Int](arrayLiteral: 2,6,9,12,12);
+        
+        let mean = MathCalculations.CalculateMean(set: valueB_arr);
+        let median = MathCalculations.CalculateMedian(set: valueB_arr)
+        let mode = MathCalculations.CalculateMode(set: valueB_arr);
+        
+        lblCalc.text = "Value B- Mean: " + String(format : "%.2f", mean) + "\nValue B- Medain: " + String(median) + "\nValue B- Mode: " + String(mode);
+    }
     
     
     
