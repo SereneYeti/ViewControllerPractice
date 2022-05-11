@@ -29,14 +29,14 @@ class MathCalculations{
         
         var Median:Double = 0;
         
-        print(sortedSet);
+        //print(sortedSet);
         if(sortedSet.count%2 != 0){ //Odd Number of items in set
-            print("Odd");
+            //print("Odd");
             let medianPos = Double((sortedSet.count/Int(2))).rounded(.up);            
             Median = Double(sortedSet[Int(medianPos)]);
         }
         else{ //Else Even Number of items in set
-            print("Even");
+            //print("Even");
             let midTerm:Double = Double((sortedSet.count))/2.0;
             let lowerTerm = Int(midTerm.rounded(.down)-1);
             let upperTerm = Int(midTerm.rounded(.up));

@@ -34,11 +34,12 @@
                                     <segue destination="NZi-GR-F7F" kind="show" id="P7N-mO-uIx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnJ-dz-DI9">
-                                <rect key="frame" x="154" y="480" width="107" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnJ-dz-DI9">
+                                <rect key="frame" x="0.0" y="88" width="218" height="114"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.15923816120000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" image="dice6" imagePlacement="leading">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Go To Dice ">
                                             <attributes>
@@ -58,6 +59,8 @@
                         <constraints>
                             <constraint firstItem="7oT-aY-IPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5lR-5c-Q0G"/>
                             <constraint firstItem="7oT-aY-IPr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Joa-oP-ZhV"/>
+                            <constraint firstItem="nnJ-dz-DI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dvI-GP-sCL"/>
+                            <constraint firstItem="nnJ-dz-DI9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e8w-KR-hCv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q9U-RD-3Ul"/>
@@ -193,7 +196,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dnn-zb-JeU"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="tiL-ak-TaP" firstAttribute="top" secondItem="dbu-kv-jGD" secondAttribute="bottom" constant="8" symbolic="YES" id="6tb-aV-P8J"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="dbu-kv-jGD" secondAttribute="leading" id="B0T-V0-Po0"/>
@@ -300,7 +303,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="htc-Et-LmZ">
                                 <rect key="frame" x="-55" y="766" width="151" height="75"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Value A Stats">
@@ -312,7 +315,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-nS-iVJ">
                                 <rect key="frame" x="244" y="766" width="150" height="75"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Value B Stats">
@@ -324,7 +327,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8ZQ-KA-DqZ">
                                 <rect key="frame" x="104" y="766" width="132" height="75"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Total Stats">
@@ -388,6 +391,7 @@
     <resources>
         <image name="dice1" width="100" height="100"/>
         <image name="dice2" width="100" height="100"/>
+        <image name="dice6" width="100" height="100"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -397,17 +401,11 @@
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
