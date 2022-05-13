@@ -194,17 +194,37 @@
                                     <segue destination="hR7-Ty-x5n" kind="show" id="e9J-b9-ZWY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-AY-gr8">
+                                <rect key="frame" x="95.5" y="812" width="223.5" height="45.5"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="View Dice Stats">
+                                            <attributes>
+                                                <font key="NSFont" size="27" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="no7-Di-gZV" kind="show" id="5m3-mP-cUT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dnn-zb-JeU"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.26730941968561123" green="0.087649395130385818" blue="0.32744842827922171" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="tiL-ak-TaP" firstAttribute="top" secondItem="dbu-kv-jGD" secondAttribute="bottom" constant="8" symbolic="YES" id="6tb-aV-P8J"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="dbu-kv-jGD" secondAttribute="leading" id="B0T-V0-Po0"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="dbu-kv-jGD" secondAttribute="trailing" id="CHd-4o-HzV"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="eSc-NO-MZG" secondAttribute="trailing" id="CLD-jI-EW9"/>
+                            <constraint firstItem="5BQ-AY-gr8" firstAttribute="top" secondItem="EXU-J8-ErI" secondAttribute="bottom" id="EqM-rk-Opk"/>
                             <constraint firstItem="EXU-J8-ErI" firstAttribute="centerX" secondItem="Vts-9a-5Hv" secondAttribute="centerX" id="Mvh-D7-8tG"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="eSc-NO-MZG" secondAttribute="leading" id="Po5-c0-smu"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="leading" secondItem="tiL-ak-TaP" secondAttribute="leading" id="aVF-7U-EIM"/>
+                            <constraint firstItem="5BQ-AY-gr8" firstAttribute="centerX" secondItem="Vts-9a-5Hv" secondAttribute="centerX" id="cMS-v5-UpN"/>
                             <constraint firstItem="dnn-zb-JeU" firstAttribute="bottom" secondItem="EXU-J8-ErI" secondAttribute="bottom" constant="50" id="gmW-ep-OZX"/>
                             <constraint firstItem="EXU-J8-ErI" firstAttribute="top" secondItem="eSc-NO-MZG" secondAttribute="bottom" constant="8" symbolic="YES" id="hS9-yn-RQO"/>
                             <constraint firstItem="IF2-P9-hrj" firstAttribute="trailing" secondItem="tiL-ak-TaP" secondAttribute="trailing" id="rkU-l6-4Cl"/>
@@ -228,11 +248,11 @@
         <scene sceneID="zW8-Ht-lGh">
             <objects>
                 <viewController id="hR7-Ty-x5n" customClass="DiceRollHistoryViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="OVu-2y-VRz">
+                    <view key="view" contentMode="scaleToFill" id="OVu-2y-VRz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-q0-bZz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-q0-bZz">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -302,7 +322,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="htc-Et-LmZ">
-                                <rect key="frame" x="-55" y="766" width="151" height="75"/>
+                                <rect key="frame" x="-55" y="830" width="151" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -314,7 +334,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-nS-iVJ">
-                                <rect key="frame" x="244" y="766" width="150" height="75"/>
+                                <rect key="frame" x="244" y="830" width="150" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -326,7 +346,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8ZQ-KA-DqZ">
-                                <rect key="frame" x="104" y="766" width="132" height="75"/>
+                                <rect key="frame" x="104" y="766" width="132" height="96"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -339,7 +359,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WQg-NE-gwZ"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.26666668059999998" green="0.086274504660000001" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="SuZ-q0-bZz" firstAttribute="centerY" secondItem="WQg-NE-gwZ" secondAttribute="centerY" id="3E8-ic-QGO"/>
@@ -353,6 +373,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="htc-Et-LmZ" secondAttribute="bottom" id="ZpU-2z-6me"/>
                             <constraint firstItem="SuZ-q0-bZz" firstAttribute="height" secondItem="OVu-2y-VRz" secondAttribute="height" multiplier="0.85" id="dwe-a6-81U"/>
                             <constraint firstItem="Ryp-nS-iVJ" firstAttribute="trailing" secondItem="OVu-2y-VRz" secondAttribute="trailingMargin" id="uPH-0v-4vu"/>
+                            <constraint firstItem="8ZQ-KA-DqZ" firstAttribute="top" secondItem="WQg-NE-gwZ" secondAttribute="top" constant="678" id="zKV-fc-htp"/>
                             <constraint firstItem="Ryp-nS-iVJ" firstAttribute="leading" secondItem="8ZQ-KA-DqZ" secondAttribute="trailing" constant="8" symbolic="YES" id="zgr-KE-R04"/>
                         </constraints>
                     </view>
@@ -364,6 +385,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sX-tX-qCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3195.6521739130435" y="98.4375"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="MbF-T0-zE8">
+            <objects>
+                <viewController id="no7-Di-gZV" customClass="GraphViewController" customModule="ViewControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ktB-6X-Enx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="m7m-Ms-77f"/>
+                        <color key="backgroundColor" red="0.66115960910000005" green="0.50247334249999998" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qZ0-bL-bsu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5d-rd-JvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3943" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQq-9Z-n6t">
@@ -409,9 +446,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
